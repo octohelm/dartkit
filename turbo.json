@@ -1,0 +1,20 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "gen": {
+      "dependsOn": [
+        "^gen"
+      ]
+    },
+    "fmt": {},
+    "test": {
+      "inputs": [
+        "bin/*",
+        "lib/*",
+        "src/*",
+        "package.json",
+        "pubspec.lock"
+      ]
+    }
+  }
+}

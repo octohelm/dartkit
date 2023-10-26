@@ -1,0 +1,9 @@
+.dart_tool/
+.turbo/
+build/
+*.iml
+
+.secrets/
+.env.local
+
+pubspec.lock

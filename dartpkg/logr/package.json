@@ -1,0 +1,26 @@
+{
+  "name": "@octohelm/dart-logr",
+  "version": "0.1.2",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "fmt": "dart fix --apply && dart format -o write ./lib",
+    "test": "dart test",
+    "postinstall": "bunx @octohelm/dartpkg postinstall"
+  },
+  "dependencies": {
+    "@octohelm/dart-context": "workspace:^"
+  },
+  "exports": {
+    "bun": "./pubspec.yaml"
+  },
+  "files": [
+    "lib/*",
+    "pubspec.yaml"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:octohelm/dartkit.git",
+    "directory": "dartpkg/logr"
+  }
+}

@@ -1,0 +1,5 @@
+dependency_overrides:
+  context:
+    path: ../context
+  logr:
+    path: ../logr

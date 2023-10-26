@@ -1,0 +1,24 @@
+{
+  "name": "@octohelm/dart-context",
+  "version": "0.1.2",
+  "description": "pure golang context.Context implements in dart",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "lib/*",
+    "pubspec.yaml"
+  ],
+  "exports": {
+    "bun": "./pubspec.yaml"
+  },
+  "scripts": {
+    "test": "dart test",
+    "fmt": "dart fix --apply && dart format -o write ./lib",
+    "postinstall": "bunx @octohelm/dartpkg postinstall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:octohelm/dartkit.git",
+    "directory": "dartpkg/context"
+  }
+}
