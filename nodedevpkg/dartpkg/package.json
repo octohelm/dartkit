@@ -1,0 +1,21 @@
+{
+  "name": "@octohelm/dartpkg",
+  "type": "module",
+  "license": "MIT",
+  "description": "dart pub in npm",
+  "version": "0.1.2",
+  "bin": {
+    "dartpkg": "./bin/index.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "pacote": "^17.0.4",
+    "globby": "^13.1.4",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "@types/pacote": "^11.1.6"
+  }
+}

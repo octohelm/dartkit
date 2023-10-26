@@ -1,0 +1,27 @@
+{
+  "name": "dartkit",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "dartpkg/*",
+    "nodedevpkg/*"
+  ],
+  "engines": {
+    "bun": ">= 1"
+  },
+  "devDependencies": {
+    "bun-types": "^1.0.7",
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2"
+  },
+  "prettier": {},
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:octohelm/dartkit.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
