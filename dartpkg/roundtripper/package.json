@@ -1,0 +1,20 @@
+{
+  "name": "@octohelm/dart-roundtripper",
+  "description": "another composable, Future-based library for making HTTP requests",
+  "version": "0.1.0",
+  "dependencies": {
+    "@octohelm/dart-context": "workspace:^",
+    "@octohelm/dart-logr": "workspace:^"
+  },
+  "exports": {
+    "bun": "./pubspec.yaml"
+  },
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "dart test",
+    "fmt": "dart fix --apply && dart format -o write ./lib",
+    "gen": "dart run build_runner build --delete-conflicting-outputs",
+    "postinstall": "bunx @octohelm/dartpkg postinstall"
+  }
+}

@@ -1,0 +1,17 @@
+name: roundtripper
+version: 0.1.0
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+dependencies:
+  http_parser: ^4.0.2
+  dio: ^5.3.3
+  copy_with_extension: ^4.0.0
+  context: ^0.1.2
+  logr: ^0.1.2
+dev_dependencies:
+  filesize: ^2.0.1
+  shelf_test_handler: ^2.0.2
+  shelf_multipart: ^1.0.0
+  copy_with_extension_gen: ^4.0.0
+  test: ^1.24.3
+  build_runner: ^2.4.6
