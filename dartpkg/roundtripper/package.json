@@ -1,7 +1,7 @@
 {
   "name": "@octohelm/dart-roundtripper",
   "description": "another composable, Future-based library for making HTTP requests",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "dependencies": {
     "@octohelm/dart-context": "workspace:^",
     "@octohelm/dart-logr": "workspace:^"

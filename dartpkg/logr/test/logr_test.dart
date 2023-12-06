@@ -10,7 +10,7 @@ main() {
     log.info("info");
     log.v(0).info("v(0).info");
     log.v(1).info("v(1).info");
-    log.error(Exception("error"), "error");
+    log.error(Exception("error"));
     log.withName("testing").info("with prefix");
   });
 
@@ -41,7 +41,7 @@ _someAction() {
   try {
     _throw();
   } catch (e, stackTrace) {
-    log?.error(e as Exception, "do failed", stackTrace: stackTrace);
+    log?.error(e as Exception, msg: "do failed", stackTrace: stackTrace);
   }
 }
 

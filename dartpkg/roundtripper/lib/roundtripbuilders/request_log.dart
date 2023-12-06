@@ -5,23 +5,24 @@ class RequestLog implements RoundTripBuilder {
   @override
   RoundTrip build(RoundTrip rt) {
     return (request) async {
-      var logger = Logger.current;
-
       var requestStart = DateTime.now();
 
       var response = await rt(request);
 
       if (response.statusCode >= HttpStatus.badRequest) {
         if (response.statusCode >= HttpStatus.internalServerError) {
-          logger?.error(
-            ResponseException(response.statusCode, response: response),
-            _logEntities(response, requestStart),
-          );
+          Logger.current
+              ?.withValues(_logEntities(response, requestStart))
+              .error(
+                ResponseException(response.statusCode, response: response),
+              );
         } else {
-          logger?.info(_logEntities(response, requestStart));
+          Logger.current
+              ?.withValues(_logEntities(response, requestStart))
+              .info("");
         }
       } else {
-        logger?.info(_logEntities(response, requestStart));
+        Logger.current?.info(_logEntities(response, requestStart));
       }
 
       return response;

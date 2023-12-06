@@ -93,17 +93,17 @@ class Logger {
   }
 
   /// logs an Exception, String message or Map values as context and stackTrace if passed.
-  error(dynamic err, dynamic valuesOrMsg, {StackTrace? stackTrace}) {
+  error(dynamic err, {StackTrace? stackTrace, String? msg}) {
     if (err is Exception) {
       _sink.error(
         err,
-        _normalize(valuesOrMsg),
+        _normalize(msg),
         stackTrace: stackTrace,
       );
     } else {
       _sink.error(
         Exception(err),
-        _normalize(valuesOrMsg),
+        _normalize(msg),
         stackTrace: stackTrace,
       );
     }
@@ -113,7 +113,10 @@ class Logger {
     if (valuesOrMsg is Map) {
       return valuesOrMsg;
     }
-    return {"msg": valuesOrMsg};
+    if (valuesOrMsg != null) {
+      return {"msg": valuesOrMsg};
+    }
+    return {};
   }
 }
 

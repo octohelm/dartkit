@@ -52,7 +52,7 @@ class StdLogSink implements LogSinkTracer {
   }
 
   @override
-  error(Exception e, values, {StackTrace? stackTrace}) {
+  error(e, values, {stackTrace}) {
     _print(-2, {...this.values, ...values, "error": e}, stackTrace);
   }
 
